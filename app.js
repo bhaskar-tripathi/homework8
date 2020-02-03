@@ -170,17 +170,17 @@ async function addTeam() {
 
         switch (response.emptype) {
             case "Manager":
-                let manager = new Manager(response.name, response.id, response.email, "Manager", response.officeNumber);
+                let manager = new Manager(response.name, response.id, response.email, response.officeNumber);
                 myTeam.push(manager);
                 break;
 
             case "Engineer":
-                let engineer = new Engineer(response.name, response.id, response.email, "Engineer", response.github);
+                let engineer = new Engineer(response.name, response.id, response.email, response.github);
                 myTeam.push(engineer);
                 break;
 
             case "Intern":
-                let intern = new Intern(response.name, response.id, response.email, "Intern", response.school);
+                let intern = new Intern(response.name, response.id, response.email, response.school);
                 myTeam.push(intern);
                 break;
 
